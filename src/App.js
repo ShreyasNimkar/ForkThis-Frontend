@@ -9,17 +9,10 @@ import Loginscreen from "./screens/Loginscreen";
 import AuthTokenHandler from "./controllers/authTokenHandler";
 import AuthTokenHandler2 from "./controllers/AuthTokenHandler2";
 import { useCookies } from "react-cookie";
-import GitHubLoginscreen from "./screens/GitHubLoginscreen";
 
 function App() {
   const [cookies, setCookie, removeCookie] = useCookies(["token"]);
-  const { token, githubUsername } = cookies;
-
-  // if (!githubUsername && token) {
-  //   removeCookie("token");
-  //   console.log("here");
-  //   window.location.replace(`http://localhost:3000/oauth?token=${token}`);
-  // }
+  const { token } = cookies;
 
   return (
     <>
